@@ -3,8 +3,8 @@ import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import Header from './common/Header';
 import CoursesPage from './CoursePage';
-import { Route, Switch } from 'react-router-dom';
 import PageNotFound from './PageNotFound';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 function App() {
     return (
@@ -14,6 +14,7 @@ function App() {
                 <Route exact path='/' component={HomePage} />
                 <Route path='/courses' component={CoursesPage} />
                 <Route path='/about' component={AboutPage} />
+                <Redirect from='/about-page' to='/about' />
                 <Route component={PageNotFound} />
             </Switch>
         </div>
