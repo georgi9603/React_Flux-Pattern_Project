@@ -72,11 +72,11 @@
     },
     {
       "id": 11,
-      "slug": "test",
-      "title": "test",
-      "authorId": 1,
-      "category": "test",
-      "createdAt": 1588536056140
+      "slug": "dsadsa",
+      "title": "dsadsa",
+      "authorId": 2,
+      "category": "asdsa",
+      "createdAt": 1588585046913
     }
   ],
   "authors": [
