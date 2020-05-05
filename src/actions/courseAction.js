@@ -5,7 +5,7 @@ import * as courseApi from '../api/courseApi';
 export function saveCourse(course) {
     return courseApi.saveCourse(course).then(savedCourse => {
         Dispatcher.dispatch({
-            actionType: actionTypes.CREATE_COURSE,
+            actionType: course.id ? actionTypes.UPDATE_COURSE : actionTypes.CREATE_COURSE,
             course: savedCourse
         });
     })

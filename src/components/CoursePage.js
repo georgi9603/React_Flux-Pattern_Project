@@ -12,7 +12,6 @@ const CoursePage = () => {
         if (courseStore.getCourses().length === 0) {
             loadCourses();
         } else {
-            console.log(courses)
         }
         return () => courseStore.removeChangeListener(onChange);
     }, []);
