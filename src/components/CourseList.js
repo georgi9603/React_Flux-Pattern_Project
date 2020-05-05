@@ -16,6 +16,7 @@ function CourseList(props) {
                 return (
                     <tr key={course.id}>
                         <td>
+                            <button className="btn btn-outline-danger" onClick={() => props.deleteCourse(course.id)}>Delete</button>
                             <Link to={"/course/" + course.slug}>{course.title}</Link>
                         </td>
                         <td>{course.authorId}</td>
@@ -28,6 +29,7 @@ function CourseList(props) {
 }
 
 CourseList.protoTypes = {
+    deleteCourse: PropTypes.func.isRequired,
     courses: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.number.isRequired,
